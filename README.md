@@ -68,7 +68,7 @@ And speaking of architecture...
 
 ## Architecture
 
-The code makes a few (possibly unusualy, possibly insane) architectural
+The code makes a few (possibly unusual, possibly insane) architectural
 choices, in the name of experimentation and exploration. A simple
 module loader is included (see `module.js`), which allows modules to
 register themselves, and subsequently be loaded by other modules. As
