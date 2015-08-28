@@ -1,4 +1,4 @@
-= Scruffy Labrador
+# Scruffy Labrador
 
 A graph implementation in Javascript, with a focus on representing,
 creating, and visualizing mazes.
@@ -6,7 +6,7 @@ creating, and visualizing mazes.
 Like its namesake, it doesn't look like much, but it's there when you
 need it!
 
-== Usage
+## Usage
 
 First, concatenate the source files using `rake`:
 
@@ -66,7 +66,7 @@ as hexagons, triangles, and so forth.
 
 And speaking of architecture...
 
-== Architecture
+## Architecture
 
 The code makes a few (possibly unusualy, possibly insane) architectural
 choices, in the name of experimentation and exploration. A simple
@@ -75,11 +75,11 @@ register themselves, and subsequently be loaded by other modules. As
 this duplicates functionality already present in a variety of other
 projects, it will probably be replaced eventually.
 
-== Author
+## Author
 
 Jamis Buck <jamis@jamisbuck.org>
 
-== License
+## License
 
 <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
   <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
