@@ -4,7 +4,7 @@ task :build do
   # modules.js must always come first in the list
   files = files.to_a.sort_by { |f| (f =~ /modules.js/) ? "a#{f}" : "z#{f}" }
 
-  File.open("jsgrid.js", "w") do |out|
+  File.open("scruffy-labrador.js", "w") do |out|
     files.each do |file|
       out.puts "// == #{file} =="
       out.puts File.read(file)
