@@ -1,5 +1,7 @@
 # Scruffy Labrador
 
+<img src="mascot.jpg?raw=true" width="200" height="200" align="right" title="Scruffy the Labrador Retriever" alt="Our Mascot" />
+
 A graph implementation in Javascript, with a focus on representing,
 creating, and visualizing mazes.
 
