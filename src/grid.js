@@ -59,5 +59,23 @@ require['grid'] = function() {
     return this;
   }
 
+  Grid.prototype.select = function(selector) {
+    var matches = [];
+
+    if (typeof selector !== "function") {
+      var pattern = selector;
+      selector = function(cell) {
+        return cell.location.match(pattern)
+      }
+    }
+
+    this.each(function(cell) {
+      if (selector(cell))
+        matches.push(cell);
+    });
+
+    return matches;
+  }
+
   return { Grid: Grid };
 }
