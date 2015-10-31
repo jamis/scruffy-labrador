@@ -1,12 +1,24 @@
 require['utility'] = function() {
 
+  var PRNG = require('prng').PRNG;
+  var generator = new PRNG();
+
+  function srand(seed) {
+    generator = new PRNG(seed);
+    return seed;
+  }
+
   function random(lo, hi) {
+    if (!lo) {
+      return generator.random();
+    }
+
     if (!hi) {
       hi = lo;
       lo = 0;
     }
 
-    return lo + Math.floor(Math.random() * (hi - lo));
+    return lo + generator.random(hi - lo);
   }
 
   function sample(list) {
@@ -62,11 +74,14 @@ require['utility'] = function() {
   return {
     all: all,
     each: each,
+    srand: srand,
     random: random,
     reject: reject,
     sample: sample,
     select: select,
-    shuffle: shuffle
+    shuffle: shuffle,
+
+    prng: generator
   };
 
 }

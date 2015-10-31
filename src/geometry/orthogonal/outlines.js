@@ -9,6 +9,9 @@ require['geometry/orthogonal/outlines'] = function() {
     scale = scale || 1;
     styles = styles || {};
 
+    if (typeof scale != "object")
+      scale = { x: scale, y: scale };
+
     this.grid = grid;
     this.layers = [];
 
@@ -39,10 +42,10 @@ require['geometry/orthogonal/outlines'] = function() {
       if (!self.layers[world]) self.layers[world] = [];
       if (!self.layers[world][level]) self.layers[world][level] = [[], []];
 
-      var nw = new Point(column*scale, row*scale);
-      var ne = new Point((column+1)*scale, row*scale);
-      var sw = new Point(column*scale, (row+1)*scale);
-      var se = new Point((column+1)*scale, (row+1)*scale);
+      var nw = new Point(column*scale.x, row*scale.y);
+      var ne = new Point((column+1)*scale.x, row*scale.y);
+      var sw = new Point(column*scale.x, (row+1)*scale.y);
+      var se = new Point((column+1)*scale.x, (row+1)*scale.y);
 
       if (nw.x < self.min.x) self.min.x = nw.x;
       if (nw.y < self.min.y) self.min.y = nw.y;
