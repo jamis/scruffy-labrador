@@ -1,8 +1,8 @@
 require['layout/orthogonal'] = function() {
 
-  Location = require('location/lattice').Location;
+  var Location = require('location/lattice').Location;
 
-  Orthogonal = function() {
+  var Orthogonal = function() {
     var i = arguments.length - 1;
 
     this.columns = arguments[i];

@@ -50,7 +50,7 @@ require['cell'] = function() {
   Cell.prototype.neighbors = function() {
     var list = [];
     for (var direction in this.neighbor)
-      list.push(this.neighbor[direction]);
+      list = list.concat(this.neighbor[direction]);
     return list;
   }
 
