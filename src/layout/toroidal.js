@@ -42,10 +42,10 @@ require['layout/toroidal'] = function() {
       var southCirc = 2 * Math.PI * southRadius;
       var northCirc = 2 * Math.PI * northRadius;
 
-      var longest = southCirc;
-      if (northCirc > longest) longest = northCirc;
+      var shortest = southCirc;
+      if (northCirc < shortest) shortest = northCirc;
 
-      var idealCount = longest / rowHeight;
+      var idealCount = shortest / rowHeight;
       var count = 1;
 
       if(rowIdx == 0) {
